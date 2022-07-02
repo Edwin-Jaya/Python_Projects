@@ -1,6 +1,6 @@
-#SIMPLE PHONE CONTACT MANAGEMENT USING LINKED LIST IN PYTHON
+# SIMPLE PHONE CONTACT MANAGEMENT USING LINKED LIST IN PYTHON
 
-#Description
+# Description
 This Phone Contact Management System program was made in python using linked list, this program is able to:
 1. Add New Contact
 2. Delete Contact
@@ -8,5 +8,5 @@ This Phone Contact Management System program was made in python using linked lis
 4. Show Only One Contact
 5. Show All Contact
 
-#Languages
+# Languages
 Python
