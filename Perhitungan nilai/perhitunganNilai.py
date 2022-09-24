@@ -1,3 +1,5 @@
+import statistics
+
 print("Aplikasi Menghitung Nilai")
 print("-"*30)
 
@@ -33,6 +35,9 @@ tgs=int(input())
 # Nilai yang udah dimasukin, dikaliin sesuai ketentuan dari soal terus di masukin di variable nilai_prak
 nilai_tgs=0.15*tgs
 
+# Masukin nuts,nuas,prak,tgs ke list buat nanti dicari rata ama nilai maxnya
+kumpulan_nilai=[nuts,nuas,prak,tgs]
+
 # Ngehitung total nilai buat nanti ditentuin nilai akhirnya apa
 # Jumlahin nilai_uts+nilai_uas+nilai_prak+nilai_tgs terus masukin ke variable nilai_akhir
 nilai_akhir=nilai_uts+nilai_uas+nilai_prak+nilai_tgs
@@ -62,5 +67,20 @@ elif(nilai_akhir>=30 and nilai_akhir<40): #Kalo nilainya lebih besar sama dengan
     nah="D"
 elif(nilai_akhir<30): #Kalo nilainya lebih kecil dari 30, nilai akhir==E
     nah="E"
+    
 # Ngeprint nilai akhir
 print(f"Nilai akhir : {nah}")
+
+# Lulus tidaknya
+if(nah=="A" or nah=="AB" or nah=="B" or nah=="BC" or nah=="C"):
+    print("Lulus")
+else:
+    print("Tidak Lulus")
+
+# Rata-rata pake fungsi mean()
+rata=statistics.mean(kumpulan_nilai)
+print(f"Rata-rata nilai : {rata}")
+
+# Nilai maksimal pake fungsi max()
+nmax=max(kumpulan_nilai)
+print(f"Nilai maksimal : {nmax}")
